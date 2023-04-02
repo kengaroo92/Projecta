@@ -13,10 +13,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\Projecta.Core\Projecta.Core.csproj" />
     <ProjectReference Include="..\Projecta.Infrastructure\Projecta.Infrastructure.csproj" />
     <ProjectReference Include="..\Projecta.Tests\Projecta.Tests.csproj" />
