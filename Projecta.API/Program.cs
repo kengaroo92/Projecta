@@ -1,3 +1,5 @@
+using Projecta.API.Configuration;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -21,5 +23,7 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+
+DependencyInjectionConfig.ConfigureServices(builder.Services);
 
 app.Run();
