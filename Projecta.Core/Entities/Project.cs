@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Projecta.Core.Entities
+﻿namespace Projecta.Core.Entities
 {
     public class Project
     {
@@ -18,10 +12,12 @@ namespace Projecta.Core.Entities
 
         // Foreign Keys
         public int CustomerId { get; set; }
+
         public int UserId { get; set; }
 
         // Navigation properties for the relationships.
         public Customer Customer { get; set; }
+
         public User User { get; set; }
     }
 }

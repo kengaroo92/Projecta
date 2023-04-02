@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Projecta.Core.Enums;
 
 namespace Projecta.Core.Entities
 {
@@ -22,6 +18,7 @@ namespace Projecta.Core.Entities
 
         // Navigation properties for the relationships.
         public Customer Customer { get; set; }
+
         public ICollection<LineItem> LineItems { get; set; }
     }
 }
