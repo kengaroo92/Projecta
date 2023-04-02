@@ -1,4 +1,6 @@
+using Microsoft.EntityFrameworkCore;
 using Projecta.API.Configuration;
+using Projecta.Infrastructure.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,6 +10,11 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+var connectionString = builder.Configuration.GetConnectionString("ProjectaDb");
+builder.Services.AddDbContext<ProjectaDbContext>(options => options.UseNpgsql(connectionString));
+
+DependencyInjectionConfig.ConfigureServices(builder);
 
 var app = builder.Build();
 
@@ -23,7 +30,5 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
-
-DependencyInjectionConfig.ConfigureServices(builder.Services);
 
 app.Run();

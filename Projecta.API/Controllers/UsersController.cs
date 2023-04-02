@@ -1,7 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using System.Threading.Tasks;
-using Projecta.Core.Entities;
+﻿using Microsoft.AspNetCore.Mvc;
 using Projecta.Core.Repositories;
 
 namespace Projecta.API.Controllers
